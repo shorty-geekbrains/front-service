@@ -1,0 +1,67 @@
+@import "bootstrap";
+.mainContainer {
+
+}
+.video{
+  width: 70%;
+}
+.nav-left{
+  width: 20%;
+  height: 39.5vw;
+  float: left;
+}
+.header-blue{
+  background:linear-gradient(135deg, #172a74, #21a9af);
+  background-color:#184e8e;
+  padding-bottom:1px;
+  font-family:'Source Sans Pro', sans-serif;
+}
+
+.header-blue .hero p{
+  color:rgba(255,255,255,0.8);
+  font-size:20px;
+  margin-bottom:0px;
+  font-weight:300;
+}
+
+.header-blue .phone-holder{
+  text-align:right;
+}
+
+.header-blue div.iphone-mockup{
+  position:relative;
+  max-width:300px;
+  margin:0px;
+  display:inline-block;
+}
+
+.header-blue .iphone-mockup img.device{
+  width:100%;
+  height:auto;
+}
+
+.header-blue .iphone-mockup .screen{
+  position:absolute;
+  width:88%;
+  height:77%;
+  top:12%;
+  border-radius:2px;
+  left:6%;
+  border:1px solid #444;
+  background-color:#aaa;
+  overflow:hidden;
+  background-size:cover;
+  background-position:center;
+}
+
+.header-blue .iphone-mockup .screen:before {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  width: 70%;
+  height: 140%;
+  top: -12%;
+  right: -60%;
+  transform: rotate(-19deg);
+  opacity: 0.2;
+}
