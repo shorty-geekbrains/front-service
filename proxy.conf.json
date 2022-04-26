@@ -1,0 +1,7 @@
+{
+  "/video-service/*": {
+    "target": "http://localhost:8189",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

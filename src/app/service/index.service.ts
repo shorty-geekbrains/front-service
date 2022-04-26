@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Emoji} from "../model/Emoji";
 
 @Injectable({
   providedIn: 'root'
 })
 export class IndexService {
 
-  constructor() { }
+  constructor(public http: HttpClient) { }
+
+  public getVideo(){
+    return this.http.get<String[]>("video-service/video/list");
+  }
+
+  public sendEmoji(emoji: Emoji) {
+    return this.http.post('video-service/video/emoji',emoji)
+  }
 }
