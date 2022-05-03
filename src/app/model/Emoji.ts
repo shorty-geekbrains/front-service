@@ -1,6 +1,6 @@
 export class Emoji {
 
-  constructor(public link:string,
-              public emoji:number) {
+  constructor(public link:String,
+              public emoji:Number) {
   }
 }

@@ -1,57 +1,125 @@
 @import "bootstrap";
+
 .mainContainer {
 
 }
-.video{
-  width: 70%;
+
+.carousel-control-prev {
+  width: 5%;
 }
-.nav-left{
-  width: 20%;
-  height: 39.5vw;
+
+.carousel-control-next {
+  width: 5%;
+}
+
+
+
+.video {
+  /*background:linear-gradient(135deg, #585858, #464646);*/
+  left: 15%;
+  width: 85%;
+  height: 100%;
+  position: fixed;
+  horiz-align: right;
+  /*!*background-image: url("");*!*/
+
+}
+.video-background{
+  background-image: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), url('/assets/images/tv1.png');
+  background-position: center, 50% 10%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 75%;
+}
+
+
+.for-video {
+  left: 28%;
+  top: 20%;
+  max-width: 59%;
+  max-height: 70%;
+  vertical-align: middle;
+  horiz-align: center;
+  border: 0;
+}
+
+.video-button {
+  position: fixed;
+}
+.image-button {
+  width: 40px;
+  height: auto;
+  border-color: #212121;
+}
+
+.video-button-like {
+  position: fixed;
+  top: 94%;
+  left: 70%;
+}
+
+.video-button-dislike {
+  position: fixed;
+  top: 94%;
+  left: 45%;
+}
+
+
+
+.nav-left {
+  width: 15%;
+  height: 100%;
+  position: fixed;
   float: left;
 }
-.header-blue{
-  background:linear-gradient(135deg, #172a74, #21a9af);
-  background-color:#184e8e;
-  padding-bottom:1px;
-  font-family:'Source Sans Pro', sans-serif;
+
+
+.header-blue {
+  /*background:linear-gradient(135deg, #2d2d2d, #242424);*/
+  border-right: #ebeff1 thick solid;
+  /*!*background-color:#184e8e;*!*/
+  padding-bottom: 1px;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color:#212121;
+  background-position: center, 50% -110%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 300%;
 }
 
-.header-blue .hero p{
-  color:rgba(255,255,255,0.8);
-  font-size:20px;
-  margin-bottom:0px;
-  font-weight:300;
+.header-blue .hero p {
+  color: rgba(255, 255, 255);
+  font-size: 20px;
+  margin-bottom: 0px;
+  font-weight: 300;
 }
 
-.header-blue .phone-holder{
-  text-align:right;
+.header-blue .phone-holder {
+  text-align: right;
 }
 
-.header-blue div.iphone-mockup{
-  position:relative;
-  max-width:300px;
-  margin:0px;
-  display:inline-block;
+.header-blue div.iphone-mockup {
+  position: relative;
+  max-width: 300px;
+  margin: 0px;
+  display: inline-block;
 }
 
-.header-blue .iphone-mockup img.device{
-  width:100%;
-  height:auto;
+.header-blue .iphone-mockup img.device {
+  width: 100%;
+  height: auto;
 }
 
-.header-blue .iphone-mockup .screen{
-  position:absolute;
-  width:88%;
-  height:77%;
-  top:12%;
-  border-radius:2px;
-  left:6%;
-  border:1px solid #444;
-  background-color:#aaa;
-  overflow:hidden;
-  background-size:cover;
-  background-position:center;
+.header-blue .iphone-mockup .screen {
+  position: absolute;
+  width: 88%;
+  height: 77%;
+  top: 12%;
+  border-radius: 2px;
+  left: 6%;
+  border: 1px solid #444;
+  background-color: #aaa;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
 .header-blue .iphone-mockup .screen:before {

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {IndexService} from "../service/index.service";
+import {Emoji} from "../model/Emoji";
 
 @Component({
   selector: 'app-index',
@@ -43,8 +44,12 @@ export class IndexComponent implements OnInit {
     this.link=this.links[this.nowLink];
   }
 
-  public sendLike() {
+  public sendLike(link: String) {
+    this.indexService.sendEmoji(new Emoji(link,1));
+  }
 
+  public sendDislike(link: String) {
+    this.indexService.sendEmoji(new Emoji(link,-1));
   }
 
 }

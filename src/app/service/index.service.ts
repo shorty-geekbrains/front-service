@@ -14,6 +14,7 @@ export class IndexService {
   }
 
   public sendEmoji(emoji: Emoji) {
-    return this.http.post('video-service/video/emoji',emoji)
+    console.log(emoji);
+    this.http.post('video-service/video/emoji',emoji).subscribe();
   }
 }
