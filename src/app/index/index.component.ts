@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {IndexService} from "../service/index.service";
 import {Emoji} from "../model/Emoji";
 
+export const INDEX = 'index';
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -22,6 +24,7 @@ export class IndexComponent implements OnInit {
       .subscribe(links => {
         this.links = links;
         this.link = this.links[0];
+        console.log(this.links)
       }, error => {
         console.log(error)
       });

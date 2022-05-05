@@ -1,6 +1,5 @@
 .header-blue{
   background-color:#212121;
-  padding-bottom:1px;
   font-family:'Source Sans Pro', sans-serif;
   border-bottom: #ebeff1 thick solid;
 }
@@ -13,8 +12,6 @@
 
 .header-blue .navbar{
   background:transparent;
-  padding-top:12px;
-  padding-bottom:10px;
   color:#fff;
   border-radius:0;
   box-shadow:none;

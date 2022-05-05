@@ -10,7 +10,7 @@ export class IndexService {
   constructor(public http: HttpClient) { }
 
   public getVideo(){
-    return this.http.get<String[]>("video-service/video/list");
+    return this.http.get<String[]>("video-service/video/amazon");
   }
 
   public sendEmoji(emoji: Emoji) {
