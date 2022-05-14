@@ -16,6 +16,8 @@ export class IndexComponent implements OnInit {
   nowLink: number=0;
 
   link: String= "";
+  private files: any;
+
 
   constructor(private indexService: IndexService) {  }
 
@@ -53,6 +55,20 @@ export class IndexComponent implements OnInit {
 
   public sendDislike(link: String) {
     this.indexService.sendEmoji(new Emoji(link,-1));
+  }
+
+  addVideo(event : any) {
+    console.log(event);
+    let target = event.target || event.srcElement;
+    this.files = target.files;
+    if (this.files) {
+      let files :FileList = this.files;
+      const formData = new FormData();
+      for(let i = 0; i < files.length; i++){
+        formData.append('file', files[i]);
+      }
+      this.indexService.sendFileToServer(formData);
+    }
   }
 
 }

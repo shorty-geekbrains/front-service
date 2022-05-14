@@ -1,6 +1,15 @@
 <div class="mainContainer">
   <div class="nav-left header-blue">
       <div class="image-nav-bar" >
+<!--        <form enctype="multipart/form-data">-->
+<!--          <img type="button" class="upload-image" src="assets/images/upload.png">-->
+<!--          <input type="file">-->
+<!--        </form>-->
+        <form method="post" name="fileInfo" enctype="multipart/data">
+          <label for="file"><img class="upload-image" src="assets/images/upload.png" width="60" /></label>
+          <input type="file" id="file" name="file" (change)="addVideo($event)" /><br />
+<!--          <input type="submit"/>-->
+        </form>
       </div>
   </div>
   <div class="video video-background">

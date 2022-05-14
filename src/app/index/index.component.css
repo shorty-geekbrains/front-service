@@ -95,6 +95,24 @@
 .header-blue .phone-holder {
   text-align: right;
 }
+.image-nav-bar{
+  position: fixed;
+}
+
+.upload-image{
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  height: 60px;
+  filter: invert(1);
+}
+#file {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
 
 .header-blue div.iphone-mockup {
   position: relative;

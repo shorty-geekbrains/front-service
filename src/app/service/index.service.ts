@@ -17,4 +17,9 @@ export class IndexService {
     console.log(emoji);
     this.http.post('video-service/video/emoji',emoji).subscribe();
   }
+
+  public sendFileToServer(formData : FormData) {
+    console.log(formData);
+    this.http.post('video-service/video/save',formData).subscribe();
+  }
 }
