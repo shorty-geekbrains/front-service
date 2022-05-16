@@ -5,10 +5,9 @@
 <!--          <img type="button" class="upload-image" src="assets/images/upload.png">-->
 <!--          <input type="file">-->
 <!--        </form>-->
-        <form method="post" name="fileInfo" enctype="multipart/data">
+        <form method="post" name="fileInfo" enctype="multipart/form-data">
           <label for="file"><img class="upload-image" src="assets/images/upload.png" width="60" /></label>
           <input type="file" id="file" name="file" (change)="addVideo($event)" /><br />
-<!--          <input type="submit"/>-->
         </form>
       </div>
   </div>

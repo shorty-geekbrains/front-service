@@ -64,9 +64,10 @@ export class IndexComponent implements OnInit {
     if (this.files) {
       let files :FileList = this.files;
       const formData = new FormData();
-      for(let i = 0; i < files.length; i++){
-        formData.append('file', files[i]);
-      }
+      formData.append('file', files[0])
+      // for(let i = 0; i < files.length; i++){
+      //   formData.append('file', files[i]);
+      // }
       this.indexService.sendFileToServer(formData);
     }
   }
