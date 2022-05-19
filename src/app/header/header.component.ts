@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../service/auth.service";
+import {NavigationEnd, Router} from "@angular/router";
+import {INDEX} from "../index/index.component";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isIndex: boolean = false;
+
+  constructor(private router: Router,
+              public auth: AuthService) { }
 
   ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isIndex = event.url === '/' || event.url === '/' + INDEX;
+      }
+    })
   }
 
+  logout() {
+    this.auth.logout();
+    this.router.navigateByUrl("/");
+  }
 }
