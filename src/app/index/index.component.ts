@@ -16,8 +16,10 @@ export class IndexComponent implements OnInit {
   nowLink: number=0;
 
   link: String= "";
+
   private files: any;
 
+  likes: String="";
 
   constructor(private indexService: IndexService) {  }
 
@@ -26,6 +28,7 @@ export class IndexComponent implements OnInit {
       .subscribe(links => {
         this.links = links;
         this.link = this.links[0];
+        this.likes = this.links[this.nowLink+1];
         console.log(this.links)
       }, error => {
         console.log(error)
@@ -33,11 +36,12 @@ export class IndexComponent implements OnInit {
   }
 
   public nextVideo() {
-    if(this.nowLink==this.links.length-1) {
+    if(this.nowLink==this.links.length-2) {
       return;
     }
-    this.nowLink++;
+    this.nowLink=this.nowLink+2;
     this.link=this.links[this.nowLink];
+    this.likes = this.links[this.nowLink+1];
 
   }
 
@@ -45,8 +49,9 @@ export class IndexComponent implements OnInit {
     if(this.nowLink==0) {
       return;
     }
-    this.nowLink--;
+    this.nowLink=this.nowLink-2;
     this.link=this.links[this.nowLink];
+    this.likes = this.links[this.nowLink+1];
   }
 
   public sendLike(link: String) {

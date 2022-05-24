@@ -57,10 +57,21 @@
   left: 70%;
 }
 
+.video-heart {
+  position: fixed;
+  top: 94%;
+  left: 55%;
+}
+.video-heart-count{
+  position: fixed;
+  top: 94.8%;
+  left: 55.6%;
+}
+
 .video-button-dislike {
   position: fixed;
   top: 94%;
-  left: 45%;
+  left: 40%;
 }
 
 
