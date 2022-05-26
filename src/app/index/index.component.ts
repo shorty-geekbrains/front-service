@@ -21,6 +21,10 @@ export class IndexComponent implements OnInit {
 
   likes: String="";
 
+  likesNumb: number=0;
+
+  isLike: boolean=false;
+
   constructor(private indexService: IndexService) {  }
 
   ngOnInit(): void {
@@ -29,36 +33,50 @@ export class IndexComponent implements OnInit {
         this.links = links;
         this.link = this.links[0];
         this.likes = this.links[this.nowLink+1];
+        this.likesNumb = Number(this.likes);
         console.log(this.links)
+        console.log(this.likesNumb)
       }, error => {
         console.log(error)
       });
   }
 
   public nextVideo() {
+    this.isLike=false;
     if(this.nowLink==this.links.length-2) {
       return;
     }
     this.nowLink=this.nowLink+2;
     this.link=this.links[this.nowLink];
     this.likes = this.links[this.nowLink+1];
+    this.likesNumb = Number(this.likes);
 
   }
 
   public prevVideo() {
+    this.isLike=false;
     if(this.nowLink==0) {
       return;
     }
     this.nowLink=this.nowLink-2;
     this.link=this.links[this.nowLink];
     this.likes = this.links[this.nowLink+1];
+    this.likesNumb = Number(this.likes);
   }
 
   public sendLike(link: String) {
+  if(!this.isLike) {
+    this.isLike=true;
+    this.likesNumb++;
+  }
     this.indexService.sendEmoji(new Emoji(link,1));
   }
 
   public sendDislike(link: String) {
+    if(!this.isLike) {
+      this.isLike=true;
+      this.likesNumb--;
+    }
     this.indexService.sendEmoji(new Emoji(link,-1));
   }
 
